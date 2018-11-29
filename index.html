@@ -25,6 +25,33 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script>
+    function start() {
+      // 2. Initialize the JavaScript client library.
+      gapi.client.init({
+        'apiKey': '513150289753',
+        // Your API key will be automatically added to the Discovery Document URLs.
+        'discoveryDocs': ['https://people.googleapis.com/$discovery/rest'],
+        // clientId and scope are optional if auth is not required.
+        'clientId': '513150289753-frmeccn9vqhupg6n50cebbo5m58faoie.apps.googleusercontent.com',
+        'scope': 'profile',
+      }).then(function() {
+        // 3. Initialize and make the API request.
+        return gapi.client.people.people.get({
+          'resourceName': 'people/me',
+          'requestMask.includeField': 'person.names'
+        });
+      }).then(function(response) {
+        console.log(response.result);
+      }, function(reason) {
+        console.log('Error: ' + reason.result.error.message);
+      });
+    };
+    // 1. Load the JavaScript client library.
+    gapi.load('client', start);
+    </script>
   </head>
   <body>
     
@@ -229,11 +256,11 @@
         <div class="row">
         	<div class="col-md-4 ftco-animate">
         		<div class="work-entry">
-	        		<a href="#" class="img" style="background-image: url(images/work-1.jpg);">
+	        		<a href="#" class="img" style="background-image: url(images/MEUVIVO.png);">
 	        			<div class="text d-flex justify-content-center align-items-center">
 		        			<div class="p-3">
-		        				<span>Branding</span>
-		        				<h3>Work 01</h3>
+		        				<span>Mobile</span>
+		        				<h3>Meu Vivo</h3>
 		        			</div>
 	        			</div>
 	        		</a>
@@ -241,11 +268,11 @@
         	</div>
         	<div class="col-md-4 ftco-animate">
         		<div class="work-entry">
-	        		<a href="#" class="img" style="background-image: url(images/work-2.jpg);">
+	        		<a href="#" class="img" style="background-image: url(images/esphera.jpeg);">
 	        			<div class="text d-flex justify-content-center align-items-center">
 		        			<div class="p-3">
-		        				<span>Branding</span>
-		        				<h3>Work 02</h3>
+		        				<span>Mobile</span>
+		        				<h3>ESPHERA Napp Solutions</h3>
 		        			</div>
 	        			</div>
 	        		</a>
@@ -253,11 +280,11 @@
         	</div>
         	<div class="col-md-4 ftco-animate">
         		<div class="work-entry">
-	        		<a href="#" class="img" style="background-image: url(images/work-3.jpg);">
+	        		<a href="#" class="img" style="background-image: url(images/ubby.jpg);">
 	        			<div class="text d-flex justify-content-center align-items-center">
 		        			<div class="p-3">
-		        				<span>Branding</span>
-		        				<h3>Work 03</h3>
+		        				<span>Mobile/SAAS</span>
+		        				<h3>Ubby cash back platform</h3>
 		        			</div>
 	        			</div>
 	        		</a>
@@ -265,11 +292,11 @@
         	</div>
         	<div class="col-md-4 ftco-animate">
         		<div class="work-entry">
-	        		<a href="#" class="img" style="background-image: url(images/work-4.jpg);">
+	        		<a href="#" class="img" style="background-image: url(images/ditto.jpg);">
 	        			<div class="text d-flex justify-content-center align-items-center">
 		        			<div class="p-3">
-		        				<span>Branding</span>
-		        				<h3>Work 01</h3>
+		        				<span>Distributed Systems/infra</span>
+		        				<h3>Ditto Music</h3>
 		        			</div>
 	        			</div>
 	        		</a>
@@ -277,11 +304,11 @@
         	</div>
         	<div class="col-md-4 ftco-animate">
         		<div class="work-entry">
-	        		<a href="#" class="img" style="background-image: url(images/work-5.jpg);">
+	        		<a href="#" class="img" style="background-image: url(images/formosa.jpg);">
 	        			<div class="text d-flex justify-content-center align-items-center">
 		        			<div class="p-3">
-		        				<span>Branding</span>
-		        				<h3>Work 02</h3>
+		        				<span>Crypto Exchange/Mobile</span>
+		        				<h3>Formosa Bank at Argentina</h3>
 		        			</div>
 	        			</div>
 	        		</a>
@@ -289,11 +316,11 @@
         	</div>
         	<div class="col-md-4 ftco-animate">
         		<div class="work-entry">
-	        		<a href="#" class="img" style="background-image: url(images/work-6.jpg);">
+	        		<a href="#" class="img" style="background-image: url(images/estacio.jpg);">
 	        			<div class="text d-flex justify-content-center align-items-center">
 		        			<div class="p-3">
-		        				<span>Branding</span>
-		        				<h3>Work 03</h3>
+		        				<span>Mobile/SAAS</span>
+		        				<h3>Estacio</h3>
 		        			</div>
 	        			</div>
 	        		</a>
@@ -401,11 +428,13 @@
 	            <h2 class="mb-2">Reasons for Choosing Us </h2>
 	          </div>
 	          <div class="ftco-animate">
-	          	<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. Because there were thousands of bad Commas, wild Question Marks and devious Semikoli</p>
+	          	<p></p>
 	          	<ul class="un-styled my-5">
-	          		<li><span class="icon-check"></span>Consectetur adipisicing elit</li>
-	          		<li><span class="icon-check"></span>Adipisci repellat accusamus</li>
-	          		<li><span class="icon-check"></span>Tempore reprehenderit vitae</li>
+	          		<li><span class="icon-check"></span>We take care about the hole development proccess for you</li>
+	          		<li><span class="icon-check"></span>Exclusive dedicated teams to each project</li>
+                <li><span class="icon-check"></span>Real time project report</li>
+                <li><span class="icon-check"></span>Pay-per-task completed</li>
+                <li><span class="icon-check"></span>NDA terms and digital contracts</li>
 	          	</ul>
 	          </div>
     			</div>
